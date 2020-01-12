@@ -1,0 +1,22 @@
+//deifing varibles of colors
+$color-primary: #0abde3;
+$color-secondary: #2c3335;
+
+//font color list
+$fonts: (
+  fontOne: #fff
+);
+
+//giving style to body bt variable
+body {
+  background-color: $color-primary;
+}
+
+//styling p tag bt varible and color from list of colors
+p {
+  background-color: $color-secondary;
+  color: map-get($map: $fonts, $key: fontOne);
+  // we can use map-get in another way that is :::=>
+  //color : map-get($fonts,fontOne);
+}
+

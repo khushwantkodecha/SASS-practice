@@ -1,0 +1,22 @@
+//defing list of all the colors
+$colors: (
+  primary: #3498db,
+  secondary: #e83350
+);
+
+//defining funciton for getting color name
+@function color($colorName) {
+  @return map-get($map: $colors, $key: $colorName);
+}
+
+//putting style in body
+body {
+  background-color: color(primary);
+  color: color(secondary);
+  //nesting styling (a is inside the p tag)
+  p {
+    a {
+      color: color(secondary);
+    }
+  }
+}
